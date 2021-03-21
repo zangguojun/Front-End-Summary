@@ -51,7 +51,7 @@ Formatting context 是 W3C CSS2.1 规范中的一个概念。它是页面中的�
 - 1、float的值不是none。
 - 2、position的值不是static或者relative。
 - 3、display的值是inline-block、table-cell、flex、table-caption或者inline-flex
-- 4、overflow的值不是visible，比如hidden、scroll、auto
+- 4、overflow的值不是visible，比如hidden、scroll、auto、inherit
 
 ### 0.2 BFC的作用
 
