@@ -1,8 +1,19 @@
 ## 页面从输入URL到页面加载显示完成，这个过程中都发生了什么？
 
-原文链接：https://www.cnblogs.com/xiaohuochai/p/9193083.html
+![img](https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-11/url%E8%BE%93%E5%85%A5%E5%88%B0%E5%B1%95%E7%A4%BA%E5%87%BA%E6%9D%A5%E7%9A%84%E8%BF%87%E7%A8%8B.jpg)
+
+
 
 ![http](https://pic.xiaohuochai.site/blog/httpUrl1.png)
+
+总体来说分为以下几个过程:
+
+1. DNS解析
+2. TCP连接
+3. 发送HTTP请求
+4. 服务器处理请求并返回HTTP报文
+5. 浏览器解析渲染页面
+6. 连接结束
 
 ## 一、构建请求
 

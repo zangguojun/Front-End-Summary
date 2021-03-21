@@ -51,7 +51,7 @@ Formatting context 是 W3C CSS2.1 规范中的一个概念。它是页面中的�
 - 1、float的值不是none。
 - 2、position的值不是static或者relative。
 - 3、display的值是inline-block、table-cell、flex、table-caption或者inline-flex
-- 4、overflow的值不是visible
+- 4、overflow的值不是visible，比如hidden、scroll、auto
 
 ### 0.2 BFC的作用
 
@@ -287,6 +287,7 @@ right会自动的适应宽度，这时候就形成了一个两栏自适应的布
   - ```html
     <!DOCTYPE html>
     <html lang="en">
+    ```
 <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -315,7 +316,7 @@ right会自动的适应宽度，这时候就形成了一个两栏自适应的布
     </body>
     </html>
     ```
-    
+
   - ![image-20210307111414893](https://cdn.jsdelivr.net/gh/zangguojun/PicGo/20210307111416.png)
 
 + 两个元素是父子关系（没有内边距或边框把外边距分割开）：
@@ -351,8 +352,8 @@ right会自动的适应宽度，这时候就形成了一个两栏自适应的布
         </div>
     </body>
     </html>
-    ```
-    
+  ```
+  
   + 
     
   + ![这里写图片描述](https://img-blog.csdn.net/20180503145333478?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NoaV8xMjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
@@ -362,6 +363,7 @@ right会自动的适应宽度，这时候就形成了一个两栏自适应的布
   + ```html
     <!DOCTYPE html>
     <html lang="en">
+    ```
 <head>
         <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -389,7 +391,7 @@ right会自动的适应宽度，这时候就形成了一个两栏自适应的布
     </body>
     </html>
     ```
-    
+
   + ![这里写图片描述](https://img-blog.csdn.net/20180503150007411?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NoaV8xMjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
   
   + 如果这个外边距遇到另一个元素的外边距，还会发生合并：
