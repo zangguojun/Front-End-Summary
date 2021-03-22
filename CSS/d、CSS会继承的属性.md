@@ -1,0 +1,16 @@
+- 字体相关属性
+  - font-family 字体系列
+  - font-weight 字体粗细程度
+  - font-size 字体大小
+  - font-style 字体风格
+- 文本相关属性
+  - text-indent 文本缩进
+  - text-align 文本对齐方式
+  - line-height 行高
+  - color 文本颜色
+- 元素可见性
+  - visibility 控制元素的显示和隐藏
+- 列表布局属性
+  - list-style 列表风格 包括list-style-type list-style-image等
+- 光标属性
+  - cursor 光标显示的各种形态
