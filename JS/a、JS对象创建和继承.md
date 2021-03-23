@@ -241,7 +241,7 @@ function Woman(name,age){
 }
 Woman.prototype = new People();
 Woman.prototype.constructor = Woman;
-let wonmanObj = new Woman(ren,27);
+let wonmanObj = new Woman('luo',27);
 wonmanObj.eat();
 ```
 
@@ -262,17 +262,6 @@ wonmanObj.eat();
 通过寄生的方式来修复组合式继承的不足，完美的实现继承
 
 ```js
-//父类
-function People(name,age){
-    this.name = name || 'wangxiao'
-    this.age = age || 27
-}
-//父类方法
-People.prototype.eat = function(){
-    return this.name + this.age + 'eat sleep'
-}
-
-
 //子类
 function Woman(name,age){
     //继承父类属性
@@ -293,7 +282,7 @@ let womanObj = new Woman();
 
 
 
-### 6.es6继承
+### 6.ES6继承
 
 ```js
 //class 相当于es5中构造函数
