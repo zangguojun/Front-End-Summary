@@ -39,6 +39,12 @@ Set-Cookie: JSESSIONID=dWi7X6oNWfBN-88xGmDuFq94.undefined; Path=/
 
 > SessionID为服务器产生的一个客户端会话标识，客户端下一次HTTP请求报文中带上该SessionID，那么服务器将确认客户端身份，而无需进行认证，SessionID在客户端通常存放于本地的Cookie中
 
+
+
+
+
+
+
 ## 2、HTTP1.1
 
 **①：引入长连接机制**
@@ -82,6 +88,32 @@ Conetnt-length字段位于HTTP响应报文中，用于确定响应体的字节�
 通常基于HTTP下载文件中，已传输的部分通过文件系统写入到临时文件（.temp .download等格式中）
 
 当发生暂停或者网络断开，下一次继续重传时，HTTP请求报文中，添加**已经传输部分的长度**。
+
+
+
+#### 1. 缓存处理
+
+在HTTP1.0中主要使用header里的If-Modified-Since,Expires来做为缓存判断的标准，HTTP1.1则引入了更多的缓存控制策略例如Entity tag，If-Unmodified-Since, If-Match, If-None-Match等更多可供选择的缓存头来控制缓存策略。
+
+#### 2. 带宽优化
+
+HTTP1.1在请求头中引入了range头域，允许只请求资源的某个部分，返回码为206。而HTTP1.0只能得到整个对象。
+
+#### 3. 新增错误状态响应码
+
+409（请求资源与当前资源状态发生冲突），410（gone，服务器某个资源被永久性删除）。
+
+#### 4. 增加Host头域
+
+由于虚拟主机的发展，一个物理ip后可能有多个虚拟主机。
+
+#### 5. 支持长连接
+
+HTTP1.1支持长连接和请求的流水线处理，减少了建立和关闭连接消耗的时间。
+
+
+
+
 
 ## 2、HTTP2.0
 
