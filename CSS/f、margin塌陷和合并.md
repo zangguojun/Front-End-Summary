@@ -48,10 +48,10 @@ Formatting context 是 W3C CSS2.1 规范中的一个概念。它是页面中的�
 
 ##### 如何创建BFC(body 元素本身就是一个BFC容器)
 
-- 1、float的值不是none。
-- 2、position的值不是static或者relative。
-- 3、display的值是inline-block、table-cell、flex、table-caption或者inline-flex
-- 4、overflow的值不是visible，比如hidden、scroll、auto、inherit
+- 1、**float**的值不是**none**。
+- 2、**position**的值不是**static**或者**relative**。
+- 3、**display**的值是**inline-block**、table-cell、**flex**、table-caption或者inline-flex
+- 4、**overflow**的值不是visible，比如**hidden、scroll、auto**
 
 ### 0.2 BFC的作用
 

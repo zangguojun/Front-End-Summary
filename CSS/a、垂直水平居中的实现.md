@@ -11,8 +11,11 @@
 * 子盒子margin-left:子盒子宽度的一半，margin-top:子盒子高度的一半，让子盒子的中心成为父盒子的中心
 
 ```js
-.parent{
-	position: relative;
+.parent {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background-color: blue;
 }
 .child {
     width: 100px;
@@ -21,9 +24,15 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-left: 50px;
-	margin-top: 50px;
+    margin-left: -50px;
+    margin-top: -50px;
 }
+```
+
+```html
+<div class="parent">
+    <div class="child"></div>
+</div>
 ```
 
 ### 二、position + transform
@@ -35,8 +44,11 @@
 * 子盒子transform: translate(-50%,-50%)，平移为子盒子宽度和高度一半，让子盒子的中心成为父盒子的中心
 
 ```js
-.parent{
-	position: relative;
+.parent {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background-color: blue;
 }
 .child {
     width: 100px;
@@ -57,18 +69,22 @@
 * 子盒子margin: auto
 
 ```js
-.parent{
-	position: relative;
+.parent {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background-color: blue;
 }
 .child {
     width: 100px;
     height: 100px;
     background-color: yellowgreen;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: 50px;
-	margin-top: 50px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
 }
 ```
 
@@ -85,6 +101,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: blue;
 }
 .child {
     width: 100px;
@@ -95,8 +112,8 @@
 
 ## ②水平居中的实现
 
-- 利用块级元素撑满父元素的特点，如果宽度已定，左右margin auto就可以平分剩余空间
-- 利用行内块居中： 把父级元素设置为text-align=center，之后子元素的display设置为inline-block
+- 利用**块级元素**撑满父元素的特点，如果**宽度已定**或者`width: fit-content;`，左右`margin:auto`就可以平分剩余空间
+- 利用**行内元素**居中: `text-align: center`
 - 绝对定位：postion ：absolute，之后left 50% + (margin/ transform)
 - flex: 父元素**display:flex    justify-content：center**
 
@@ -106,9 +123,7 @@
 
   利用内边距，让块级文字包裹在padding中，实现垂直居中。
 
-- 父元素高度确定的单行文本：
-
-  使用行高的特性：height=line-height即可。
+- 利用**行内元素**居中 : 使用行高的特性：height=line-height即可。
 
 - 父元素高度确定的多行文本：
 

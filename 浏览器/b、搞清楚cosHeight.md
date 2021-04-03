@@ -19,13 +19,13 @@
 ![图片描述](https://img.mukewang.com/58f5b32e0001a2fa04110247.jpg)
 
 **接下来讨论出现有滚动条时的情况**：
-当本元素的子元素比本元素高且overflow=scroll时，本元素会scroll，这时：
-`scrollHeight`: 因为子元素比父元素高，父元素不想被子元素撑的一样高就显示出了滚动条，在滚动的过程中本元素有部分被隐藏了，scrollHeight代表包括当前不可见部分的元素的高度。而可见部分的高度其实就是clientHeight，也就是scrollHeight>=clientHeight恒成立。在有滚动条时讨论scrollHeight才有意义，在没有滚动条时scrollHeight==clientHeight恒成立。单位px，只读元素。
+当本元素的子元素比本元素高且`overflow=scroll`时，本元素会scroll，这时：
+`scrollHeight`: 因为子元素比父元素高，父元素不想被子元素撑的一样高就显示出了滚动条，在滚动的过程中本元素有部分被隐藏了，**scrollHeight代表包括当前不可见部分的元素的高度**。而**可见部分的高度其实就是clientHeight**，也就是`scrollHeight>=clientHeight`恒成立。在有滚动条时讨论scrollHeight才有意义，在没有滚动条时`scrollHeight==clientHeight`恒成立。单位px，只读元素。
 
 ![图片描述](https://img.mukewang.com/58f5b3700001627d05110413.jpg)
 
-`scrollTop`: 代表在有滚动条时，滚动条向下滚动的距离也就是元素顶部被遮住部分的高度。在没有滚动条时scrollTop==0恒成立。单位px，可读可设置。
-`offsetTop`: 当前元素顶部距离最近"设置了position属性的"父元素顶部的距离,和有没有滚动条没有关系。单位px，只读元素。
+`scrollTop`: 代表在**有滚动条时**，**滚动条向下滚动的距离也就是元素顶部被遮住部分的高度**。在没有滚动条时`scrollTop==0`恒成立。单位px，可读可设置。
+`offsetTop`: 当前元素顶部距离最近"**设置了position属性的**"父元素顶部的距离,和有没有滚动条没有关系。单位px，只读元素。
 
 ![图片描述](https://img.mukewang.com/58f5b4050001e99204480302.jpg)
 
