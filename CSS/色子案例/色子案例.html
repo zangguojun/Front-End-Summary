@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>色子案例</title>
+</head>
+<body>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .warp {
+      display: flex;
+    }
+    .container {
+      height: 100px;
+      width: 100px;
+      border: 2px solid black;
+      border-radius: 10px;
+      box-shadow: 2px 2px 2px 2px;
+      margin: 30px;
+      display: flex;
+    }
+    .item {
+      width: 30px;
+      height: 30px;
+      background-color: black;
+      border-radius: 50%;
+    }
+    /*  */
+    .one {
+      justify-content: center;
+      align-items: center;
+    }
+    /*  */
+    .two {
+      /* 竖着 */
+      /* flex-direction: column;
+      justify-content: space-around;
+      align-items: center; */
+
+      /* 横着 */
+      justify-content: space-around;
+      align-items: center;
+    }
+    /*  */
+    .three {
+      justify-content: space-around;
+    }
+    .three .item:nth-child(1) {
+      align-self: flex-start;
+    }
+    .three .item:nth-child(2) {
+      align-self: center;
+    }
+    .three .item:nth-child(3) {
+      align-self: flex-end;
+    }
+    /*  */
+    .four {
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .column{
+      display: flex;
+      flex-basis: 100%;
+      justify-content: space-around;
+    }
+    /*  */
+    .five {
+      flex-wrap: wrap;
+      align-content: center;
+    }
+    .column2 {
+      flex-basis: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
+    /*  */
+    .six {
+      flex-wrap: wrap;
+      align-content:space-around;
+    }
+    .column3 {
+      flex-basis: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
+  </style>
+</body>
+  <div class="warp">
+    <!--  -->
+    <div class="container one">
+      <div class="item"></div>
+    </div>
+    <!--  -->
+    <div class="container two">
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+    <!--  -->
+    <div class="container three">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+    <!--  -->
+    <div class="container four">
+      <div class="column">
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="column">
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+    </div>
+    <!--  -->
+    <div class="container five">
+      <div class="column2">
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="column2">
+        <div class="item"></div>
+      </div>
+      <div class="column2">
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+    </div>
+    <!--  -->
+    <div class="container six">
+      <div class="column3">
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="column3">
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="column3">
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+    </div>
+  </div>
+</html>
